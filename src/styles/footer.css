@@ -1,0 +1,33 @@
+.footer {
+    background: #000;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 55px;
+    padding-bottom: 5px;
+}
+
+.footer-logo img {
+    width: 122px;
+}
+
+.footer-copyright {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 400px) {
+    .footer {
+        background: #000;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+    }
+}

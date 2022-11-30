@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 210px;
+}
+
+
+.header-nav .nav-item {
+    font-size: 24px;
+    margin-left: 35px;
+}
+
+.header-nav .nav-item.active {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+    .header-logo img {
+        width: 145px;
+    }
+
+    .header-nav .nav-item {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-logo img {
+        width: 120px;
+    }
+
+    .header-nav .nav-item {
+        margin-left: 10px;
+    }
+}

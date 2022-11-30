@@ -1,6 +1,16 @@
+import '../styles/header.css';
+
 function Header() {
     return (
-        <div>Je suis le header</div>
+        <header class="header container">
+            <div class="header-logo">
+                <img src="../assets/img/logo-red.svg" alt="Kasa" />
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-item active">Accueil</a>
+                <a href="about.html" class="nav-item">A Propos</a>
+            </nav>
+        </header>
     )
 }
  
