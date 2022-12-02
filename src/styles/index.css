@@ -48,3 +48,15 @@ img {
     margin: 0 auto;
     padding: 20px;
 }
+
+.bg-light {
+    background: #F7F7F7;
+}
+
+.rounded-xl {
+    border-radius: 25px;
+}
+
+.rounded-md {
+    border-radius: 10px;
+}
