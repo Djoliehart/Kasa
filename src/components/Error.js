@@ -1,8 +1,15 @@
+import BlockCenter from "./BlockCenter"
+
 function Error() {
     return (
-        <div>
-            <h1>Oups 🙈 Cette page n'existe pas</h1>
-        </div>
+        <main class="main container">
+            <BlockCenter
+                title="404"
+                description="Oups! La page que vous demandez n'existe pas."
+                link="/"
+                anchor="Retourner sur la page d’accueil"
+            />
+        </main>
     )
 }
  

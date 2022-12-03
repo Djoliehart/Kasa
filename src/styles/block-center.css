@@ -1,0 +1,39 @@
+.block-center {
+    text-align: center;
+    padding: 20px;
+}
+
+.block-title {
+    font-size: 288px;
+    font-weight: 700;
+}
+
+.block-text {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.block-link {
+    display: inline-block;
+    margin-top: 80px;
+    text-decoration: underline;
+}
+
+.block-link:hover {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .block-title {
+        font-size: 96px;
+    }
+
+    .block-text {
+        font-size: 18px;
+    }
+
+    .block-link {
+        font-size: 14px;
+    }
+}
