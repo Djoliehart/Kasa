@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import '../styles/header.css';
 
 function Header() {
@@ -7,8 +8,20 @@ function Header() {
                 <img src="../assets/img/logo-red.svg" alt="Kasa" />
             </div>
             <nav className="header-nav">
-                <a href="index.html" className="nav-item active">Accueil</a>
-                <a href="about.html" className="nav-item">A Propos</a>
+                <NavLink
+                    className="nav-item"
+                    activeclassname="active"
+                    to="/"
+                >
+                    Accueil
+                </NavLink>
+                <NavLink
+                    className="nav-item"
+                    activeclassname="active"
+                    to="/a-propos"
+                >
+                    À Propos
+                </NavLink>
             </nav>
         </header>
     )
