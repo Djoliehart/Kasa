@@ -8,6 +8,16 @@
     gap: 60px;
 }
 
+.collapse-column {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.collapse-column > .collapse {
+    width: 50%;
+}
+
 .collapse-container {
     display: flex;
     flex-direction: column;
@@ -63,6 +73,16 @@
 
 
 @media screen and (max-width: 800px) {
+    .collapse-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .collapse-column > .collapse {
+        width: 100%;
+    }
+
     .collapse-column {
         display: flex;
         flex-direction: column;
