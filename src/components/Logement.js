@@ -1,20 +1,17 @@
 import '../styles/logement.css';
 import Collapse from './Collapse';
+import Slideshow from './Slideshow';
 
 function Logement() {
     return (
         <main className="main container">
-            <div className="slider rounded-xl">
-                <img src="../assets/img/home-living-room.jpg" alt="Cozy loft on the Canal Saint-Martin" className="slider-img rounded-xl active" />
-                <img src="../assets/img/home-living-room.jpg" alt="Cozy loft on the Canal Saint-Martin" className="slider-img rounded-xl" />
-                <button className="slider-prev">
-                    <img src="../assets/img/arrow_left.svg" alt="Précédent" />
-                </button>
-                <button className="slider-next">
-                    <img src="../assets/img/arrow_right.svg" alt="Suivant" />
-                </button>
-                <span className="slider-step">1/4</span>
-            </div>
+            <Slideshow
+                pictures={[
+                    './assets/img/home-living-room.jpg',
+                    './assets/img/snow-mountain.jpg',
+                    './assets/img/rocks-sea.jpg'
+                ]}
+            />
             <div className="info mt-30">
                 <div className="info-left">
                     <h1 className="info-title h2 m-0">Cozy loft on the Canal Saint-Martin</h1>
@@ -31,11 +28,11 @@ function Logement() {
                         <img src="../assets/img/avatar.png" alt="" className="info-use-avatar" />
                     </div>
                     <div className="info-star">
-                        <img src="../assets/img/star_rate-red.svg" alt="" class="star-item star-red" />
-                        <img src="../assets/img/star_rate-red.svg" alt="" class="star-item star-red" />
-                        <img src="../assets/img/star_rate-red.svg" alt="" class="star-item star-red" />
-                        <img src="../assets/img/star_rate-light.svg" alt="" class="star-item star-light" />
-                        <img src="../assets/img/star_rate-light.svg" alt="" class="star-item star-light" />
+                        <img src="../assets/img/star_rate-red.svg" alt="" className="star-item star-red" />
+                        <img src="../assets/img/star_rate-red.svg" alt="" className="star-item star-red" />
+                        <img src="../assets/img/star_rate-red.svg" alt="" className="star-item star-red" />
+                        <img src="../assets/img/star_rate-light.svg" alt="" className="star-item star-light" />
+                        <img src="../assets/img/star_rate-light.svg" alt="" className="star-item star-light" />
                     </div>
                 </div>
             </div>

@@ -1,0 +1,70 @@
+.carrousel {
+    position: relative;
+    height: 415px;
+}
+
+.carrousel::after {
+    content: "";
+    position: absolute;
+    background: #000;
+    opacity: .05;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border-radius: inherit;
+}
+
+.carrousel-img {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .2s;
+}
+
+.carrousel-img.active {
+    opacity: 1;
+}
+
+.carrousel-prev,
+.carrousel-next {
+    position: absolute;
+    background: transparent;
+    border: unset;
+    cursor: pointer;
+    width: 80px;
+    z-index: 3;
+    top: 165px;
+}
+
+.carrousel-prev {
+    left: -5px;
+}
+
+.carrousel-next {
+    right: -5px;
+}
+
+.carrousel-step {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 11.6px);
+    z-index: 3;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 600px) {
+    .carrousel {
+        height: 255px;
+    }
+
+    .carrousel-prev, .carrousel-next {
+        width: 40px;
+        top: 110px
+    }
+}
