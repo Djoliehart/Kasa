@@ -1,6 +1,7 @@
 import '../styles/logement.css';
 import Collapse from './Collapse';
 import Slideshow from './Slideshow';
+import Info from './Info';
 
 function Logement() {
     return (
@@ -12,30 +13,17 @@ function Logement() {
                     './assets/img/rocks-sea.jpg'
                 ]}
             />
-            <div className="info mt-30">
-                <div className="info-left">
-                    <h1 className="info-title h2 m-0">Cozy loft on the Canal Saint-Martin</h1>
-                    <p className="info-desc h3 mt-5">Paris, Île-de-France</p>
-                    <ul className="info-tag">
-                        <li className="tag-item rounded-md">Cozy</li>
-                        <li className="tag-item rounded-md">Canal</li>
-                        <li className="tag-item rounded-md">Paris 10</li>
-                    </ul>
-                </div>
-                <div className="info-right">
-                    <div className="info-user">
-                        <span className="info-user-name h4">Alexandre <br />Dumas</span>
-                        <img src="../assets/img/avatar.png" alt="" className="info-use-avatar" />
-                    </div>
-                    <div className="info-star">
-                        <img src="../assets/img/star_rate-red.svg" alt="" className="star-item star-red" />
-                        <img src="../assets/img/star_rate-red.svg" alt="" className="star-item star-red" />
-                        <img src="../assets/img/star_rate-red.svg" alt="" className="star-item star-red" />
-                        <img src="../assets/img/star_rate-light.svg" alt="" className="star-item star-light" />
-                        <img src="../assets/img/star_rate-light.svg" alt="" className="star-item star-light" />
-                    </div>
-                </div>
-            </div>
+            <Info
+                title="Cozy loft on the Canal Saint-Martin"
+                description="Paris, Île-de-France"
+                tags={[
+                    'Cozy',
+                    'Canal',
+                    'Paris 10'
+                ]}
+                userName="Alexandre <br />Dumas"
+                userAvatar="../assets/img/avatar.png"
+            />
             <div className="collapse-column mt-15 mb-30">
                 <Collapse
                     title="Description"
