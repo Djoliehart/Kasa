@@ -2,43 +2,35 @@ import '../styles/logement.css';
 import Collapse from './Collapse';
 import Slideshow from './Slideshow';
 import Info from './Info';
+import { useParams } from 'react-router-dom';
+import logements from '../logements.json';
 
 function Logement() {
+    const { id } = useParams()
+    const logement = logements.find(logement => logement.id === id)
+
     return (
         <main className="main container">
-            <Slideshow
-                pictures={[
-                    './assets/img/home-living-room.jpg',
-                    './assets/img/snow-mountain.jpg',
-                    './assets/img/rocks-sea.jpg'
-                ]}
-            />
+            <Slideshow pictures={logement.pictures} />
             <Info
-                title="Cozy loft on the Canal Saint-Martin"
-                description="Paris, Île-de-France"
-                tags={[
-                    'Cozy',
-                    'Canal',
-                    'Paris 10'
-                ]}
-                userName="Alexandre <br />Dumas"
-                userAvatar="../assets/img/avatar.png"
+                title={logement.title}
+                description={logement.location}
+                tags={logement.tags}
+                hostName={logement.host.name}
+                hostAvatar={logement.host.picture}
             />
             <div className="collapse-column mt-15 mb-30">
                 <Collapse
                     title="Description"
-                    description="Vous serez à 50m du canal Saint-martin où vous pourrez pique-niquer l'été et à côté de nombreux bars et restaurants. Au cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires. Vous êtes à1 station de la gare de l'est (7 minutes à pied)."
+                    description={logement.description}
                 />
                 <Collapse
                     title="Équipements"
-                    description="
-                        Climatisation \n
-                        Wi-Fi \n
-                        Cuisine \n
-                        Espace de travail \n
-                        Fer à repasser \n
-                        Sèche-cheveux \n
-                        Cintres"
+                    description=<ul className="collapse-list m-0 p-0">
+                        { logement.equipments.map((equipment, index) => (
+                            <li key={index}>{equipment}</li>
+                        )) }
+                    </ul>
                 />
             </div>
         </main>

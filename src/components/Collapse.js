@@ -12,9 +12,7 @@ function Collapse(props) {
                     <img src={visible ? '../assets/img/arrow_up.svg' : '../assets/img/arrow_down.svg'} alt="Voir moins" className="collapse-icon" />
                 </button>
             </div>
-            <div className="collapse-content">
-                <p className="collapse-text m-0">{props.description}</p> 
-            </div>
+            <div className="collapse-content">{props.description}</div>
         </div>
     )
 }

@@ -46,6 +46,10 @@
     color: #fff;
 }
 
+.collapse-list {
+    list-style: none;
+}
+
 .collapse-btn {
     background-color: transparent;
     border-color: transparent;

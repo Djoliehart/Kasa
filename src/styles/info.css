@@ -3,17 +3,19 @@
     justify-content: space-between;
 }
 
-.info-user {
+.info-host {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.info-user-name {
+.info-host-name {
     text-align: right;
+    display: block;
+    max-width: min-content;
 }
 
-.info-use-avatar {
+.info-host-avatar {
     height: 64px;
     width: 64px;
     border-radius: 50%;
@@ -45,7 +47,7 @@
         font-size: 14px;
     }
 
-    .info-user-name {
+    .info-host-name {
         font-size: 12px;
     }
     

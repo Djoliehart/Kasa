@@ -13,9 +13,9 @@ function Info(props) {
                 </div>
             </div>
             <div className="info-right">
-                <div className="info-user">
-                    <span className="info-user-name h4">{props.userName}</span>
-                    <img src={props.userAvatar} alt="" className="info-use-avatar" />
+                <div className="info-host">
+                    <span className="info-host-name h4">{props.hostName}</span>
+                    <img src={props.hostAvatar} alt="" className="info-host-avatar" />
                 </div>
                 <div className="info-star">
                     <Rating star="3" />
