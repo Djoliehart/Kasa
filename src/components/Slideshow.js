@@ -34,13 +34,18 @@ function Slideshow(props) {
                     />
                 )
             }) }
-            <button className="carrousel-prev" type="button" onClick={(event) => prev()}>
-                <img src="../assets/img/arrow_left.svg" alt="Précédent" />
-            </button>
-            <button className="carrousel-next" type="button" onClick={(event) => next()}>
-                <img src="../assets/img/arrow_right.svg" alt="Suivant" />
-            </button>
-            <span className="carrousel-step">{current}/{props.pictures.length}</span>
+            { props.pictures.length > 1 && (
+                <div>
+                    <button className="carrousel-prev" type="button" onClick={(event) => prev()}>
+                        <img src="../assets/img/arrow_left.svg" alt="Précédent" />
+                    </button>
+                    <button className="carrousel-next" type="button" onClick={(event) => next()}>
+                        <img src="../assets/img/arrow_right.svg" alt="Suivant" />
+                    </button>
+                    <span className="carrousel-step">{current}/{props.pictures.length}</span>
+                </div>
+                )
+            }
         </div>
     )
 }

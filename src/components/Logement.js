@@ -1,6 +1,7 @@
 import '../styles/logement.css';
 import Collapse from './Collapse';
 import Slideshow from './Slideshow';
+import Error from './Error';
 import Info from './Info';
 import { useParams } from 'react-router-dom';
 import logements from '../logements.json';
@@ -8,6 +9,10 @@ import logements from '../logements.json';
 function Logement() {
     const { id } = useParams()
     const logement = logements.find(logement => logement.id === id)
+
+    if (!logement) {
+        return <Error />
+    }
 
     return (
         <main className="main container">

@@ -2,7 +2,7 @@ import BlockCenter from "./BlockCenter"
 
 function Error() {
     return (
-        <main class="main container">
+        <main className="main container">
             <BlockCenter
                 title="404"
                 description="Oups! La page que vous demandez n'existe pas."
